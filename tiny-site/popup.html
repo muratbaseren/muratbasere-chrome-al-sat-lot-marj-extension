@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <title>Al/Sat - Lot - Marj Hesaplama</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            /* width: 400px; */
+        }
+
+        .fs-075 {
+            font-size: 0.75rem !important;
+        }
+
+        .col-form-label,
+        .custom-label {
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body class="p-2">
+    <div class="container-fluid">
+        <div class="row mb-3">
+            <div class="col-10 mb-3">
+                <h3 class="border-bottom pb-1 text-primary">Al/Sat Hesaplayıcı</h3>
+                <small class="fs-075">Yatırım tutarınızı girerek, lot
+                    güncel birim fiyatını belirterek hesaplamın otomatik yapılması ve alınabilecek lot adedini
+                    görebilirsiniz.</small>
+            </div>
+            <div class="col-2 text-end">
+                <a href="options.html" class="btn btn-secondary btn-sm">Ayarlar</a>
+            </div>
+            <div class="col-12">
+                <form id="lotForm">
+                    <div class="row align-items-center mb-2">
+                        <label for="investment" class="col-4 col-form-label fw-medium">Yatırım Miktarı :</label>
+                        <div class="col-8">
+                            <input type="number" class="form-control form-control-sm" id="investment" min="0" step="any"
+                                required>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-2">
+                        <label for="price" class="col-4 col-form-label fw-medium">Güncel Fiyat :</label>
+                        <div class="col-8">
+                            <input type="number" class="form-control form-control-sm" id="price" min="0" step="any"
+                                required>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-2">
+                        <label class="col-4 col-form-label fw-medium">Lot Adedi :</label>
+                        <div class="col-8">
+                            <span id="result" class="fw-bold">0.00</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mb-3">
+                <h3 class="border-bottom pb-1 text-success">Emir Fiyatı</h3>
+                <small class="fs-075">Güncel fiyat ile marj aralığına göre hedef fiyatı hesaplayabileceğiniz bir araç.</small>
+            </div>
+            <div class="col-12">
+                <form id="marginForm">
+                    <div class="row align-items-center mb-2">
+                        <label for="current-price" class="col-4 col-form-label fw-medium">Güncel Fiyat :</label>
+                        <div class="col-8">
+                            <input type="number" class="form-control form-control-sm" id="current-price" min="0"
+                                step="any" required>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-2">
+                        <label for="margin" class="col-4 col-form-label fw-medium">Marj Yüzde(%) :</label>
+                        <div class="col-8">
+                            <div class="input-group input-group-sm">
+                                <div class="input-group-text">
+                                    <input class="form-check-input mt-0" type="checkbox" value="" id="margin-dir" checked>
+                                    <span id="margin-dir-span" class="input-text ps-1 pb-1">+</span>
+                                </div>
+                                <input type="text" class="form-control" id="margin" required>
+                                <select class="form-select fs-075" id="margin-select">
+                                    <option value="">Hızlı Seçim</option>
+                                    <!-- <option value="0.10">0.1</option>
+                                    <option value="0.08">0.08</option>
+                                    <option value="0.06">0.06</option>
+                                    <option value="0.04">0.04</option>
+                                    <option value="0.02">0.02</option>
+                                    <option value="0.01">0.01</option> -->
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-2">
+                        <label class="col-4 col-form-label fw-medium">Hedef Fiyat :</label>
+                        <div class="col-8">
+                            <span id="target-price" class="fw-bold">0.00</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

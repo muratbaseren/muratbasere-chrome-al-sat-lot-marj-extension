@@ -16,6 +16,14 @@ Bu repoda ayrıca `tiny-site` klasöründe, Progressive Web App (PWA) olarak yap
 2. Popup üzerinden al-sat, lot ve marj hesaplamalarını gerçekleştirin.
 3. Ayarları options sayfasından düzenleyebilirsiniz.
 
+### Paketlenmemiş Chrome Extension Kurulumu
+4. `chrome-extension.zip` dosyasını bilgisayarınıza indirin.
+5. Chrome tarayıcısında `chrome://extensions/` adresine gidin.
+6. Sağ üstte "Geliştirici modu"nu etkinleştirin.
+7. "Paketlenmemiş öğeyi yükle" veya "Load unpacked" butonuna tıklayın.
+8. `chrome-extension.zip` dosyasını bir klasöre çıkarın.
+9. Açılan klasörü seçerek uzantıyı yükleyin.
+
 ## Özellikler
 - Al-sat işlemleri için hızlı hesaplama
 - Lot ve marj hesaplama

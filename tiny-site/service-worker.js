@@ -1,12 +1,12 @@
-const CACHE_NAME = 'aslmh-app-cache-v1';
+const CACHE_NAME = 'aslmh-app-cache-v2';
 const ASSETS_TO_CACHE = [
-  '/index.html',
-  '/popup.html',
-  '/popup.js',
-  '/options.html',
-  '/options.js',
-  '/icon-192.png',
-  '/icon-256.png'
+    '/index.html',
+    '/index.js',
+    '/options.html',
+    '/options.js',
+    '/bootstrap.min.css',
+    '/icon-192.png',
+    '/icon-256.png'
 ];
 
 self.addEventListener('install', event => {
